@@ -1448,6 +1448,40 @@ const chainInfos = (
       features: ["stargate", "ibc-transfer", "no-legacy-stdTx", "ibc-go"],
       explorerUrlToTx: "https://ping.pub/genesisL1/tx/{txHash}",
     },
+    {
+      rpc: "https://main.rpc.agoric.net:443",
+      rest: "https://main.api.agoric.net:443",
+      chainId: "agoric-3",
+      chainName: "Agoric",
+      bip44: {
+        coinType: 564,
+      },
+      bech32Config: Bech32Address.defaultBech32Config("agoric"),
+      currencies: [
+        {
+          coinDenom: "bld",
+          coinMinimalDenom: "ubld",
+          coinDecimals: 6,
+          coinGeckoId: "agoric",
+          coinImageUrl: "/tokens/bld.png",
+          isStakeCurrency: true,
+        },
+        {
+          coinDenom: "run",
+          coinMinimalDenom: "urun",
+          coinDecimals: 6,
+          coinImageUrl: "/tokens/run.png",
+          isFeeCurrency: true,
+        },
+      ],
+      gasPriceStep: {
+        low: 0.025,
+        average: 0.025,
+        high: 0.035,
+      },
+      features: ["stargate", "ibc-transfer", "no-legacy-stdTx", "ibc-go"],
+      explorerUrlToTx: "https://agoric.explorers.guru/transaction/{txHash}",
+    },
   ] as SimplifiedChainInfo[]
 ).map(createKeplrChainInfos);
 
