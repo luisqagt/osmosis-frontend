@@ -408,6 +408,13 @@ export const IBCAssetInfos: (IBCAsset & {
     isVerified: true,
   },
   {
+    counterpartyChainId: "agoric-3",
+    sourceChannelId: "channel-143",
+    destChannelId: "channel-1",
+    coinMinimalDenom: "ubld",
+    isVerified: true,
+  },
+  {
     counterpartyChainId: "columbus-5",
     sourceChannelId: "channel-72",
     destChannelId: "channel-1",
